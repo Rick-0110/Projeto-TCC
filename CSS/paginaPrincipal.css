@@ -139,3 +139,9 @@
 #sair:hover {
     background: #a93226;
 }
+
+.areadeprodutos{
+    background-color: white;
+    display: flex;
+}
+
