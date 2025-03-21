@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topo{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+ 
+.banner75{
+    display: flex;
+   background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
+   width: 75%;
+   height: 400px;
+   align-items: center;
+   justify-content: center;
+   padding: 20px;
+}
+
+.banner75 img{
+    display: flex;
+    width: 400px;
+    height: 400px;
+ 
+
+}
+.inicio ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 300px; 
+    margin: 20px auto;
+}
+
+.inicio ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    gap: 15px; 
+    flex-wrap: wrap; 
+    align-items: end;
+    justify-content: end;
+}
+
+.inicio ul li {
+    display: flex;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    
+}
+
+.inicio ul li:hover {
+    background: linear-gradient(120deg, rgb(94, 0, 0), rgb(0, 0, 0));
+    transform: scale(1.05);
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.sidebar {
+    width: 60px;
+    height: 100vh; 
+    background: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    transition: width 0.4s ease-in-out;
+}
+
+
+.sidebar:hover {
+    width: 200px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.menu-item:hover {
+    background: #4d0101;
+}
+
+.menu-item i {
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu-item span {
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.sidebar:hover .menu-item span {
+    opacity: 1;
+}
+
+/* Estilo do botão "Sair" */
+#sair {
+    margin-top: auto; /* Empurra o botão para o final */
+    width: 100%;
+    background: #c0392b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+#sair:hover {
+    background: #a93226;
+}
