@@ -10,67 +10,48 @@
     background-color: rgb(255, 255, 255);
 }
 
-
- 
 .banner75{
     display: flex;
-   background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
-   width: 100%;
-   height: 400px;
-   align-items: center;
-   justify-content: center;
-   padding: 20px;
+    background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .banner75 img{
     display: flex;
     width: 400px;
     height: 400px;
- 
 }
 
 .inicio{
-    align-items: end;
-    justify-content: flex-end;
-        display: flex;
-}
-
-.inicio ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-    max-width: 300px; 
-    margin: 20px auto;
+    align-items: flex-end;
+    justify-content: center;
+    right: 100px;
+    display: flex;
+    position: relative;
+    left: 20px;
+    margin-top: 15px;
 }
 
 .inicio ul {
     display: flex;
     list-style: none;
-    padding: 0;
-    width: 100%;
-    display: flex; 
-    justify-content: center;
-    gap: 15px; 
-    flex-wrap: wrap; 
+    gap: 5px;
 }
 
 .inicio ul li {
-    display: flex;
     background: rgba(0, 0, 0, 0.4);
     color: white;
-    padding: 15px 25px;
+    padding: 10px 20px;
     border-radius: 8px;
     font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
     cursor: pointer;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    justify-content: end;
-    align-items: end;
-    
 }
 
 .inicio ul li:hover {
@@ -79,11 +60,9 @@
     box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.4);
 }
 
-
-
 .sidebar {
     width: 60px;
-    height: 100vh; 
+    height: 100vh;
     background: #000;
     color: white;
     display: flex;
@@ -91,10 +70,9 @@
     position: fixed;
     left: 0;
     top: 0;
-    overflow: hidden;
-    transition: width 0.4s ease-in-out;
+    transition: width 0.4s;
+    
 }
-
 
 .sidebar:hover {
     width: 200px;
@@ -104,7 +82,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 100%;
     padding: 20px;
     cursor: pointer;
     transition: background 0.3s;
@@ -116,49 +93,43 @@
 
 .menu-item i {
     font-size: 20px;
-    text-align: center;
 }
 
 .menu-item span {
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s;
 }
 
 .sidebar:hover .menu-item span {
     opacity: 1;
 }
 
-/* Estilo do botão "Sair" */
-#sair {
-    margin-top: auto; /* Empurra o botão para o final */
-    width: 100%;
-    background: #c0392b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
-}
+.sidebarIcon img{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: white;
 
-#sair:hover {
-    background: #a93226;
 }
 
 .areadeprodutos{
-    background-color: white;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
 }
 
 .produtos{
     display: flex;
-   background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
-   width: 900px;
-   height: 300px;
-   align-items: center;
-   justify-content: center;
-   padding: 50px;
-   margin: 50px;
-
+    background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
+    width: 80%;
+    height: 300px;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 50px;
+    border-radius: 20px;
 }
