@@ -32,14 +32,14 @@
     right: 100px;
     display: flex;
     position: relative;
-    left: 20px;
+    left: 5px;
     margin-top: 15px;
 }
 
 .inicio ul {
     display: flex;
     list-style: none;
-    gap: 5px;
+    gap: 20px;
 }
 
 .inicio ul li {
@@ -61,8 +61,8 @@
 }
 
 .sidebar {
-    width: 60px;
-    height: 100vh;
+    width: 50px;
+    height: 1000px;
     background: #000;
     color: white;
     display: flex;
@@ -72,10 +72,19 @@
     top: 0;
     transition: width 0.4s;
     
+    
 }
 
 .sidebar:hover {
     width: 200px;
+}
+.sidebar img{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+   position: relative;
+   left: 5px;
+   
 }
 
 .menu-item {
@@ -85,6 +94,10 @@
     padding: 20px;
     cursor: pointer;
     transition: background 0.3s;
+}
+.sair {
+    margin-top: 360px; 
+ 
 }
 
 .menu-item:hover {
@@ -112,6 +125,8 @@
     background-color: white;
 
 }
+
+
 
 .areadeprodutos{
     display: flex;
