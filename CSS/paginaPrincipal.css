@@ -104,8 +104,8 @@
 }
 
 .sair {
-    margin-top: 350px;
-    margin-bottom: 20px;
+    margin-top: auto;
+    margin-bottom: 50px;
 }
 
 .menu-item:hover {
@@ -285,6 +285,7 @@
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #555;
+
 }
 
 .footer-bottom p {
