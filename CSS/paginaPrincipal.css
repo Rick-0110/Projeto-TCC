@@ -25,6 +25,8 @@
     display: flex;
     width: 400px;
     height: 400px;
+    max-width: 100%;
+    height: auto;
 }
 
 .inicio{
@@ -41,6 +43,7 @@
     display: flex;
     list-style: none;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .inicio ul li {
@@ -53,6 +56,8 @@
     cursor: pointer;
     transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+    text-align: center;
 }
 
 .inicio ul li:hover {
@@ -63,16 +68,16 @@
 
 .sidebar {
     width: 50px;
-    height: 1000px;
+    height: 100vh;
     background: #000;
     color: white;
     display: flex;
     flex-direction: column;
-    align-items: center;
     position: fixed;
     left: 0;
     top: 0;
-    transition: width 0.4s;
+    transition: width 0.4s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar:hover {
@@ -83,68 +88,93 @@
     width: 40px;
     height: 40px;
     margin-top: 10px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar:hover img {
+    transform: scale(1.1);
 }
 
 .menu-container {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    flex: 1;
+    padding-top: 20px;
 }
 
 .menu-item {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 20px 0;
+    padding: 15px 20px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.sair {
-    margin-top: auto;
-    margin-bottom: 50px;
+.menu-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: #ff0000;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
 }
 
-.menu-item:hover {
-    background: #4d0101;
+.menu-item:hover::before {
+    transform: scaleY(1);
 }
 
 .menu-item i {
     font-size: 20px;
-    min-width: 25px;
-    text-align: center;
-    margin: 0 auto;
+    margin-left: 10px;
+    width: 25px;
+    transition: transform 0.3s ease;
+    position: relative;
+    right: 12px;
 }
 
-.sidebar:hover .menu-item i {
-    margin: 0;
+.menu-item:hover i {
+    transform: scale(1.1);
+    color: #ff0000;
 }
 
 .menu-item span {
     white-space: nowrap;
     opacity: 0;
-    transition: opacity 0.2s;
-    display: none;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    font-weight: 500;
+
 }
 
 .sidebar:hover .menu-item span {
     opacity: 1;
-    display: block;
 }
 
-.sidebarIcon img{
-    width: 50px;
-    height: 50px;
-    margin-top: 10px;
-    background-color: white;
-
+.menu-item:hover {
+    background: rgba(255, 0, 0, 0.1);
 }
 
+.sair {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 10px;
+}
 
+.sair:hover {
+    background: rgba(255, 0, 0, 0.2);
+}
 
+.sair i {
+    color: #ff4444;
+}
 
 .areadeprodutos{
     display: flex;
@@ -153,12 +183,16 @@
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produtos{
     display: flex;
     background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
     width: 80%;
+    min-width: 300px;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -175,13 +209,15 @@
     border-radius: 20px;
     padding: 20px;
     width: 100%;
-    margin-top: -50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produtos2{
     display: flex;
     background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
     width: 100%;
+    min-width: 300px;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -189,8 +225,6 @@
     margin: 50px;
     border-radius: 20px;
 }
-
-
 
 .areadeprodutos3{
     display: flex;
@@ -200,13 +234,15 @@
     border-radius: 20px;
     padding: 20px;
     width: 100%;
-    margin-top: -50px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produtos3{
     display: flex;
     background:linear-gradient(rgb(94, 0, 0)25%, rgb(0,0,0)70%);
     width: 100%;
+    min-width: 300px;
     height: 300px;
     align-items: center;
     justify-content: center;
@@ -215,15 +251,7 @@
     border-radius: 20px;
 }
 
-
-
-
-
-
-
-
-
-/* Footer não alterar agora*/
+/* area do Footer */
 .footer {
     background-color: #000000;
     color: #fff;
@@ -285,29 +313,10 @@
     margin-top: 40px;
     padding-top: 20px;
     border-top: 1px solid #555;
-
 }
 
 .footer-bottom p {
     margin: 0;
     font-size: 0.9em;
     color: #888;
-}
-
-
-@media (max-width: 768px) {
-    .footer-section {
-        min-width: 200px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-section {
-        flex: 100%;
-        text-align: center;
-    }
-    
-    .social-links {
-        justify-content: center;
-    }
 }
