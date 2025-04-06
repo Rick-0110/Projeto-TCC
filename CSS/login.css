@@ -44,7 +44,7 @@ body{
     width: 100%;
     max-width: 550px;
     padding: 20px;
-    animation: fadeIn 0.8s ease-out;
+    animation: fadeIn 0.8s ease-out;    
 }
 
 @keyframes fadeIn {
