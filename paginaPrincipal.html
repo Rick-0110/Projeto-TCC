@@ -23,7 +23,7 @@
                 <ul>
                     <li>Sobre</li>
                     <li> <a href="login.html">Login</a></li>
-                    <li>Registrar</li>
+                    <li> <a href="registro.html">Registrar</a></li>
                     
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                     <span>Produtos</span>
                 </div>
                 <div class="menu-item">
-                    <i class="fas fa-shopping-cart"></i>
+                    <i class="fas fa-shopping-cart" id="fas fa-shopping-cart"></i>
                     <span>Carrinho</span>
                 </div>
                 <div class="menu-item">
@@ -64,7 +64,8 @@
                     <span>Configurações</span>
                 </div>
                 <div class="menu-item">
-                    <i class="fas fa-wrench "></i>
+                   
+                    <i class="fas fa-wrench" onclick="servicos()"></i>
                     <span>Serviços</span>
                 </div>
             </div>
@@ -80,18 +81,19 @@
     <div class="areadeprodutos">
 
         <div class="produtos">
+            <!--produto 1-->
             <div class="produto-conteudo">
                 <img src="IMG/Extintor-Co2-1.png" alt="">
                 <div class="produto-info">
-                    <p>Extintorde CO²</p>
-                    <p><strong>R$163,00</strong></p>
-                    
+                    <p id="nomeP">Extintorde CO²</p>
+                    <p id="valor"a><strong>R$163,00</strong></p>
+                    <div id="mensagem"">Produto adicionado ao carrinho!</div>
                     <button class="btn-comprar">
                         <i class="fas fa-shopping-cart"></i>
                         Comprar
                     </button>
-                    <button class="btn-carrinho">
-                        <a href="carrinho.html"></a>
+                    <button class="btn-carrinho" id="btn-carrinho">
+                       
                         <i class="fas fa-shopping-cart"></i>
                         Carrinho
                        
